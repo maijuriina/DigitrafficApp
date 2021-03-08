@@ -15,6 +15,9 @@
 		796A861325F61E81009F6F23 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A85E825F61E7F009F6F23 /* ContentView.swift */; };
 		796A861425F61E81009F6F23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 796A85E925F61E81009F6F23 /* Assets.xcassets */; };
 		796A861525F61E81009F6F23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 796A85E925F61E81009F6F23 /* Assets.xcassets */; };
+		796A862B25F61F47009F6F23 /* Traffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A862A25F61F47009F6F23 /* Traffic.swift */; };
+		796A863225F6339F009F6F23 /* TrafficNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A863125F6339F009F6F23 /* TrafficNetworkManager.swift */; };
+		796A863C25F633D3009F6F23 /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A863B25F633D3009F6F23 /* NetworkManagerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		796A860925F61E81009F6F23 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		796A860D25F61E81009F6F23 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		796A860F25F61E81009F6F23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		796A862A25F61F47009F6F23 /* Traffic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traffic.swift; sourceTree = "<group>"; };
+		796A863125F6339F009F6F23 /* TrafficNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficNetworkManager.swift; sourceTree = "<group>"; };
+		796A863B25F633D3009F6F23 /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +104,10 @@
 		796A85E625F61E7F009F6F23 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				796A863025F6329B009F6F23 /* NetworkManager */,
+				796A862925F61F13009F6F23 /* Data */,
+				796A862825F61F05009F6F23 /* Views */,
 				796A85E725F61E7F009F6F23 /* DigitrafficAppApp.swift */,
-				796A85E825F61E7F009F6F23 /* ContentView.swift */,
 				796A85E925F61E81009F6F23 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -149,6 +157,31 @@
 				796A860F25F61E81009F6F23 /* Info.plist */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		796A862825F61F05009F6F23 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				796A85E825F61E7F009F6F23 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		796A862925F61F13009F6F23 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				796A862A25F61F47009F6F23 /* Traffic.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		796A863025F6329B009F6F23 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				796A863125F6339F009F6F23 /* TrafficNetworkManager.swift */,
+				796A863B25F633D3009F6F23 /* NetworkManagerProtocol.swift */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +342,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				796A861225F61E81009F6F23 /* ContentView.swift in Sources */,
+				796A862B25F61F47009F6F23 /* Traffic.swift in Sources */,
+				796A863225F6339F009F6F23 /* TrafficNetworkManager.swift in Sources */,
+				796A863C25F633D3009F6F23 /* NetworkManagerProtocol.swift in Sources */,
 				796A861025F61E81009F6F23 /* DigitrafficAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
