@@ -18,10 +18,6 @@ final class CurrentTrafficViewModel: ObservableObject {
 }
 
 extension CurrentTrafficViewModel {
-    func fetchAll() {
-        networkManager.fetchAllTraffic()
-    }
-    
     func fetch(by id: String = "C0150200") {
         networkManager.fetchCurrentTraffic(id: id) {
             self.current = $0

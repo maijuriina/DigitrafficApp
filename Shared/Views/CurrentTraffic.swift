@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CurrentTraffic: View {
     var traffic: TrafficModel?
-    var height: CGFloat = 0
+    //var height: CGFloat = 0
     
     var body: some View {
         VStack(alignment: .leading) {

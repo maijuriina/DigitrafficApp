@@ -29,7 +29,6 @@ class TrafficNetworkManager : NetworkManagerProtocol {
     }
     
     func fetchCurrentTraffic(id: String, completion: @escaping (TrafficModel) -> ()) {
-        // use index of list object as roadName...
         let API_URL_WITH_ID = API_URL + "/" + id
         guard let url = URL(string: API_URL_WITH_ID) else { // creates the url
             fatalError()
