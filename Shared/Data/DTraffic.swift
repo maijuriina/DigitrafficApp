@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct Traffic: Codable {
+struct DTraffic: Codable {
     let id: Int
     let cameraStationsId, cameraPresetsId, roadName, imageUrl, measuredTime: String
 }
 
 struct TrafficModel: Codable {
-    let traffic: [Traffic]
+    let traffic: [DTraffic]
 }
 

@@ -18,8 +18,8 @@ final class CurrentTrafficViewModel: ObservableObject {
 }
 
 extension CurrentTrafficViewModel {
-    func fetch(by cameraPresetId: String = "C0150200") {
-        networkManager.fetchCurrentTraffic(cameraPresetId: cameraPresetId) {
+    func fetch(by roadName: String = "Porvoo") {
+        networkManager.fetchCurrentTraffic(roadName: roadName) {
             self.current = $0
         }
     }
