@@ -9,5 +9,7 @@ import Foundation
 
 struct Traffic: Codable {
     let id: Int
-    let cameraStationsId, cameraPresetsId, roadName, imageUrl, measuredTime: String
+    let roadStationId: String
+    let presentationName: String
+    let imageUrl: String
 }

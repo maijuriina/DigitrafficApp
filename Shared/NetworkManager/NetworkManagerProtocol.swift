@@ -8,6 +8,6 @@
 import Foundation
 
 protocol NetworkManagerProtocol {
-    func fetchCurrentTraffic(roadName: String, completion: @escaping (TrafficModel) -> ())
+    func fetchCurrentTraffic(cameraPresetsId: String, completion: @escaping (TrafficModel) -> ())
     
 }
