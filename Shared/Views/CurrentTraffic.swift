@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct CurrentTraffic: View {
+    var traffic: TrafficModel?
+    var height: CGFloat = 0
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            Text("Traffic camera")
+                .font(.title)
+                .foregroundColor(Color.purple)
+            
+            /*Text("\(traffic?.name?? "Unknown")")
+                .font(.system(size: 50))
+                .bold()
+                .foregroundColor(.purple)
+                .padding(.bottom)
+ */
+        }
     }
 }
 

@@ -14,5 +14,6 @@ struct DTraffic: Codable {
 
 struct TrafficModel: Codable {
     let traffic: [DTraffic]
+    let name: String?
 }
 
