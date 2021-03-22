@@ -17,13 +17,36 @@ struct CurrentTraffic: View {
                 .font(.title2)
                 .foregroundColor(Color.purple)
             
-            /*Text("\(traffic?.traffic ?? "Unknown")")
+            Text("\(traffic?.name ?? "Unknown")")
                 .font(.system(size: 50))
                 .bold()
                 .foregroundColor(.purple)
                 .padding(.bottom)
- */
+            
+            Image(uiImage: "https://weathercam.digitraffic.fi/\(traffic?.traffic[0].cameraStations[0].cameraPresets[0].id ?? "Unknown").jpg".load())
+ 
         }
+    }
+}
+
+// used for locating picture using url
+extension String {
+    func load() -> UIImage {
+        do {
+            guard let url = URL(string: self) else {
+                return UIImage()
+            }
+            // convert url to data
+            print(url)
+            let data: Data = try
+                Data(contentsOf: url)
+            return UIImage(data: data)
+            ?? UIImage()
+        }
+        catch {
+            print(error)
+        }
+        return UIImage()
     }
 }
 

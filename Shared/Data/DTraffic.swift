@@ -26,5 +26,6 @@ struct CameraPreset: Codable {
 
 struct TrafficModel: Codable { // response from url in model
     let traffic: [DTraffic]
+    let name: String
 }
 

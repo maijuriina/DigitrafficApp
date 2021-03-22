@@ -9,6 +9,6 @@ import Foundation
 
 protocol NetworkManagerProtocol {
     func fetchAllTraffic()
-    func fetchCurrentTraffic(cameraPresetsId: String, completion: @escaping (TrafficModel) -> ())
+    func fetchCurrentTraffic(id: String, completion: @escaping (TrafficModel) -> ())
     
 }

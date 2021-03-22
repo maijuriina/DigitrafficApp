@@ -11,7 +11,7 @@ import UIKit
 struct ContentView: View {
     // create instance of TrafficNetworkManager
     let networkManager = TrafficNetworkManager()
-    @State var cameraPresetsId: String = ""
+    @State var id: String = ""
     @ObservedObject var traffic = CurrentTrafficViewModel()
     
     var body: some View {
