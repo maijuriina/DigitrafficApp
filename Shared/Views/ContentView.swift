@@ -11,9 +11,16 @@ import UIKit
 struct ContentView: View {
     // create instance of TrafficNetworkManager
     let networkManager = TrafficNetworkManager()
+    @State var roadName: String = ""
+    @ObservedObject var traffic = CurrentTrafficViewModel()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack () {
+            Text("Digitraffic")
+                .bold()
+            
+            CurrentTraffic()
+        }
     }
 }
 
