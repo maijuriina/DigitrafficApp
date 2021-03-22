@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    // create instance of TrafficNetworkManager
+    //let networkManager = TrafficNetworkManager()
     var body: some View {
         Text("Hello, world!")
             .padding()

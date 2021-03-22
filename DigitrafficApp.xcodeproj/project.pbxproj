@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7945419126087187003D8E4A /* Traffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7945419026087187003D8E4A /* Traffic.swift */; };
+		79454197260873D8003D8E4A /* CurrentTraffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79454196260873D8003D8E4A /* CurrentTraffic.swift */; };
+		7945419C260873F0003D8E4A /* CurrentTraffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79454196260873D8003D8E4A /* CurrentTraffic.swift */; };
+		794541A62608748A003D8E4A /* CurrentTrafficViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794541A52608748A003D8E4A /* CurrentTrafficViewModel.swift */; };
 		796A860325F61E81009F6F23 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A860225F61E81009F6F23 /* Tests_iOS.swift */; };
 		796A860E25F61E81009F6F23 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A860D25F61E81009F6F23 /* Tests_macOS.swift */; };
 		796A861025F61E81009F6F23 /* DigitrafficAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A85E725F61E7F009F6F23 /* DigitrafficAppApp.swift */; };
@@ -38,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7945419026087187003D8E4A /* Traffic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traffic.swift; sourceTree = "<group>"; };
+		79454196260873D8003D8E4A /* CurrentTraffic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTraffic.swift; sourceTree = "<group>"; };
+		794541A52608748A003D8E4A /* CurrentTrafficViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTrafficViewModel.swift; sourceTree = "<group>"; };
 		796A85E725F61E7F009F6F23 /* DigitrafficAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitrafficAppApp.swift; sourceTree = "<group>"; };
 		796A85E825F61E7F009F6F23 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		796A85E925F61E81009F6F23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -162,6 +169,7 @@
 		796A862825F61F05009F6F23 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				79454196260873D8003D8E4A /* CurrentTraffic.swift */,
 				796A85E825F61E7F009F6F23 /* ContentView.swift */,
 			);
 			path = Views;
@@ -171,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				796A862A25F61F47009F6F23 /* Traffic.swift */,
+				794541A52608748A003D8E4A /* CurrentTrafficViewModel.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -180,6 +189,7 @@
 			children = (
 				796A863125F6339F009F6F23 /* TrafficNetworkManager.swift */,
 				796A863B25F633D3009F6F23 /* NetworkManagerProtocol.swift */,
+				7945419026087187003D8E4A /* Traffic.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -342,9 +352,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				796A861225F61E81009F6F23 /* ContentView.swift in Sources */,
+				7945419126087187003D8E4A /* Traffic.swift in Sources */,
 				796A862B25F61F47009F6F23 /* Traffic.swift in Sources */,
+				79454197260873D8003D8E4A /* CurrentTraffic.swift in Sources */,
 				796A863225F6339F009F6F23 /* TrafficNetworkManager.swift in Sources */,
 				796A863C25F633D3009F6F23 /* NetworkManagerProtocol.swift in Sources */,
+				794541A62608748A003D8E4A /* CurrentTrafficViewModel.swift in Sources */,
 				796A861025F61E81009F6F23 /* DigitrafficAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7945419C260873F0003D8E4A /* CurrentTraffic.swift in Sources */,
 				796A861325F61E81009F6F23 /* ContentView.swift in Sources */,
 				796A861125F61E81009F6F23 /* DigitrafficAppApp.swift in Sources */,
 			);
