@@ -14,10 +14,10 @@ struct CurrentTraffic: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Traffic camera")
-                .font(.title)
+                .font(.title2)
                 .foregroundColor(Color.purple)
             
-            /*Text("\(traffic?.name?? "Unknown")")
+            /*Text("\(traffic?.traffic ?? "Unknown")")
                 .font(.system(size: 50))
                 .bold()
                 .foregroundColor(.purple)

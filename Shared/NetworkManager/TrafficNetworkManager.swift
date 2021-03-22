@@ -8,10 +8,28 @@
 import Foundation
 
 class TrafficNetworkManager : NetworkManagerProtocol {
+    let API_URL = "https://tie.digitraffic.fi/api/v1/data/camera-data"
+    
+    func fetchAllTraffic() {
+        guard let url = URL(string: API_URL) else { // creates the url
+            fatalError()
+        }
+        print(url)
+        let urlRequest = URLRequest(url: url)
+        URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
+            guard let data = data else { return }
+            
+            do {
+                let currentAllTraffic = try JSONDecoder().decode(TrafficModel.self, from: data)
+                print(currentAllTraffic)
+            } catch {
+                print(error)
+            }
+        }.resume()
+    }
+    
     func fetchCurrentTraffic(cameraPresetsId: String, completion: @escaping (TrafficModel) -> ()) {
         // use index of list object as roadName...
-        let API_URL = "https://tie.digitraffic.fi/api/v1/data/camera-data"
-    
         guard let url = URL(string: API_URL) else { // creates the url
             fatalError()
         }

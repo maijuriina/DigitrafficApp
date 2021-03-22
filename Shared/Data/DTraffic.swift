@@ -8,21 +8,23 @@
 import Foundation
 
 struct DTraffic: Codable {
-    let dataUpdatedTime: String
+    let dataUpdatedTime: Date
+    let cameraStations: [CameraStation]
 }
 
-struct CameraStations: Codable {
-    let cameraStationsId: String
+struct CameraStation: Codable {
+    let id: String
     let roadStationId: Int
+    let cameraPresets: [CameraPreset]
 }
 
-struct CameraPresets: Codable {
-    let cameraPresetsId, presentationName, imageUrl, measuredTime: String
+struct CameraPreset: Codable {
+    let id, imageUrl: String
+    let presentationName: String?
+    let measuredTime: Date?
 }
 
 struct TrafficModel: Codable { // response from url in model
     let traffic: [DTraffic]
-    let cameraStations: CameraStations
-    let cameraPresets: CameraPresets
 }
 
