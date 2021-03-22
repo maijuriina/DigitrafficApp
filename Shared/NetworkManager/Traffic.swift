@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct Traffic: Codable {
-    let id: Int
-    let roadStationId: String
+struct Traffic: Codable, Identifiable {
+    let id: String
+    let roadStationId: Int
     let presentationName: String
     let imageUrl: String
 }

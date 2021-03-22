@@ -17,13 +17,13 @@ struct CurrentTraffic: View {
                 .font(.title2)
                 .foregroundColor(Color.purple)
             
-            Text("\(traffic?.name ?? "Unknown")")
+            Text("\(traffic?.cameraStations?[0].cameraPresets?[0].presentationName ?? "Unknown")")
                 .font(.system(size: 50))
                 .bold()
                 .foregroundColor(.purple)
                 .padding(.bottom)
             
-            Image(uiImage: "https://weathercam.digitraffic.fi/\(traffic?.traffic[0].cameraStations[0].cameraPresets[0].id ?? "Unknown").jpg".load())
+            Image(uiImage: "https://weathercam.digitraffic.fi/\(traffic?.cameraStations?[0].cameraPresets?[0].id ?? "Unknown").jpg".load())
  
         }
     }

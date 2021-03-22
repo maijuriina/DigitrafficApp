@@ -7,25 +7,27 @@
 
 import Foundation
 
-struct DTraffic: Codable {
-    let dataUpdatedTime: Date
-    let cameraStations: [CameraStation]
+struct DTraffic: Decodable, Identifiable {
+    let id: String?
+    let dataUpdatedTime: String?
+    let cameraStations: [CameraStation]?
 }
 
-struct CameraStation: Codable {
-    let id: String
-    let roadStationId: Int
-    let cameraPresets: [CameraPreset]
+struct CameraStation: Decodable, Identifiable {
+    let id: String?
+    let roadStationId: Int?
+    let cameraPresets: [CameraPreset]?
 }
 
-struct CameraPreset: Codable {
-    let id, imageUrl: String
+struct CameraPreset: Decodable, Identifiable {
+    let id, imageUrl: String?
     let presentationName: String?
     let measuredTime: Date?
 }
 
-struct TrafficModel: Codable { // response from url in model
-    let traffic: [DTraffic]
-    let name: String
+struct TrafficModel: Decodable { // response from url in model
+    let dataUpdatedTime: Date?
+    let cameraStations: [CameraStation]?
+    let cameraPresets: [CameraPreset]?
 }
 
