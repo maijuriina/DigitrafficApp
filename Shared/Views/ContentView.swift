@@ -10,16 +10,15 @@ import UIKit
 
 struct ContentView: View {
     // create instance of TrafficNetworkManager
-    let networkManager = TrafficNetworkManager()
-    @State var id: String = ""
-    @ObservedObject var traffic = CurrentTrafficViewModel()
+    @EnvironmentObject var networkManager: TrafficNetworkManager
+    // @ObservedObject var traffic = CurrentTrafficViewModel()
     
     var body: some View {
         VStack (alignment: .leading) {
             Text("Digitraffic")
                 .bold()
                 
-            CurrentTraffic(traffic: self.traffic.current)
+            //CurrentTraffic(traffic: self.traffic.current)
         }
         .padding(.leading)
     }

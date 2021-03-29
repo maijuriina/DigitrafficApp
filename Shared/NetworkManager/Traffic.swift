@@ -5,7 +5,7 @@
 //  Created by Maijuriina Mustonen on 22/03/2021.
 //
 
-import Foundation
+/*import Foundation
 
 struct Traffic: Codable, Identifiable {
     let id: String
@@ -13,3 +13,4 @@ struct Traffic: Codable, Identifiable {
     let presentationName: String
     let imageUrl: String
 }
+ */

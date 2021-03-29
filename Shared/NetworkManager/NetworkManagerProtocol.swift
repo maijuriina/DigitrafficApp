@@ -8,7 +8,7 @@
 import Foundation
 
 protocol NetworkManagerProtocol {
-    func fetchAllTraffic()
-    func fetchCurrentTraffic(id: String, completion: @escaping (TrafficModel) -> ())
-    
+    func fetchData()
+    func fetchMetadata()
+    //func fetchCurrentTraffic(id: String, completion: @escaping (TrafficModel) -> ())
 }
