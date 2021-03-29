@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct DigitrafficAppApp: App {
+    let trafficNetworkManager = TrafficNetworkManager()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CurrentTraffic()
+                .environmentObject(trafficNetworkManager)
         }
+        
     }
 }

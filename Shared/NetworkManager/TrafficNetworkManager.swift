@@ -13,7 +13,7 @@ class TrafficNetworkManager: ObservableObject {
     @Published var cameraStations = [CameraStation]()
     
     // "https://tie.digitraffic.fi/api/v3/metadata/camera-stations"
-    @Published var metadata = [Feature]()
+    @Published var metadata = [DataSet]()
     
     // Store provinces in @Published array to be displayed in Views
     var province: Set<String> = []
@@ -41,7 +41,8 @@ class TrafficNetworkManager: ObservableObject {
                     let decoder = JSONDecoder()
                     if let safeData = data {
                         do {
-                            let results = try decoder.decode(TrafficData.self, from: safeData)
+                            let results = try decoder.decode(Results.self, from: safeData)
+                            print(results)
                             DispatchQueue.main.async {
                                 self.cameraStations = results.cameraStations
                             }
@@ -64,11 +65,11 @@ class TrafficNetworkManager: ObservableObject {
                     let decoder = JSONDecoder()
                     if let safeData = data {
                         do {
-                            let results = try decoder.decode(Metadata.self, from: safeData)
+                            let results = try decoder.decode(TrafficMetadata.self, from: safeData)
                             DispatchQueue.main.async {
-                                self.metadata = results.features
+                                self.metadata = results.dataSet
                                 
-                                for i in results.features {
+                                for i in results.dataSet {
                                     self.province.insert(i.properties.province)
                                 }
                                 self.provinceArray = Array(self.province)
@@ -108,7 +109,7 @@ class TrafficNetworkManager: ObservableObject {
                         
             for municipality in self.metadata {
                 if municipality.properties.municipality == selectedMunicipality {
-                    self.roadNames.append(municipality.properties.names.fi ?? "Something")
+                    self.roadNames.append(municipality.properties.names.fi ?? "Municipality")
                 }
             }
         }
@@ -136,7 +137,7 @@ class TrafficNetworkManager: ObservableObject {
             
             for road in self.cameraStations {
                 if road.id == roadId {
-                    self.imageUrls.append(road.cameraPresets[0].presentationName ?? "Not available")
+                    self.imageUrls.append(road.cameraPresets[0].presentationName ?? "Name unavailable")
                 }
             }
         }

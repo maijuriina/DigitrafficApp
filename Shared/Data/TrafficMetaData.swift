@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Metadata: Decodable {
-    let features: [Feature]
+struct TrafficMetadata: Decodable {
+    let dataSet: [DataSet]
 }
 
-struct Feature: Decodable, Identifiable {
+struct DataSet: Decodable, Identifiable {
     let id: String
     let properties: Property
     

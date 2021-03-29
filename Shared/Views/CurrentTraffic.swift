@@ -13,25 +13,23 @@ struct CurrentTraffic: View {
     @EnvironmentObject var networkManager: TrafficNetworkManager
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("Traffic camera")
-                .font(.title2)
-                .foregroundColor(Color.purple)
-            
-            /*NavigationView {
+        //VStack(alignment: .leading) {
+            NavigationView {
                 List {
-                    ForEach(networkManager.$provinceArray, id: \.self) { province in
+                    ForEach(networkManager.provinceArray, id: \.self) { province in
                         NavigationLink(destination: MunicipalityView(province: province)) {
                             Text(province)
                         }
                     }
                 }
-                .navigationBarTitle("title here")
+                .navigationBarTitle("Traffic camera")
+                
                 .onAppear {
                     self.networkManager.fetchData()
                     self.networkManager.fetchMetadata()
                 }
-            }*/
+
+            }
             
             /*Text("\(traffic.cameraStations[0].cameraPresets[0].presentationName ?? "Unknown")")
                 .font(.system(size: 50))
@@ -41,7 +39,7 @@ struct CurrentTraffic: View {
             
             */
         }
-    }
+    //}
 }
         /*VStack(alignment: .leading) {
             Text("Traffic camera")

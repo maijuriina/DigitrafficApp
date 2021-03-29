@@ -7,8 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		792DA9302611CBC200844350 /* MunicipalityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792DA92F2611CBC200844350 /* MunicipalityView.swift */; };
+		792DA9312611CBC200844350 /* MunicipalityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792DA92F2611CBC200844350 /* MunicipalityView.swift */; };
+		792DA9372611CC4A00844350 /* CityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792DA9362611CC4A00844350 /* CityView.swift */; };
+		792DA9382611CC4A00844350 /* CityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792DA9362611CC4A00844350 /* CityView.swift */; };
+		792DA93E2611CD3D00844350 /* RoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792DA93D2611CD3D00844350 /* RoadView.swift */; };
+		792DA93F2611CD3D00844350 /* RoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792DA93D2611CD3D00844350 /* RoadView.swift */; };
+		792DA9452611D29000844350 /* UrlImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792DA9442611D29000844350 /* UrlImageLoader.swift */; };
+		792DA9462611D29000844350 /* UrlImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792DA9442611D29000844350 /* UrlImageLoader.swift */; };
+		792DA94C2611D82F00844350 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792DA94B2611D82F00844350 /* ImageView.swift */; };
+		792DA94D2611D82F00844350 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792DA94B2611D82F00844350 /* ImageView.swift */; };
+		792DA9532611D89500844350 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792DA9522611D89500844350 /* AsyncImage.swift */; };
+		792DA9542611D89500844350 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792DA9522611D89500844350 /* AsyncImage.swift */; };
 		792F97042611AB7400F82FC2 /* TrafficMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792F97032611AB7400F82FC2 /* TrafficMetaData.swift */; };
-		7945419126087187003D8E4A /* Traffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7945419026087187003D8E4A /* Traffic.swift */; };
 		79454197260873D8003D8E4A /* CurrentTraffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79454196260873D8003D8E4A /* CurrentTraffic.swift */; };
 		7945419C260873F0003D8E4A /* CurrentTraffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79454196260873D8003D8E4A /* CurrentTraffic.swift */; };
 		794541A62608748A003D8E4A /* CurrentTrafficViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794541A52608748A003D8E4A /* CurrentTrafficViewModel.swift */; };
@@ -43,8 +54,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		792DA92F2611CBC200844350 /* MunicipalityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MunicipalityView.swift; sourceTree = "<group>"; };
+		792DA9362611CC4A00844350 /* CityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityView.swift; sourceTree = "<group>"; };
+		792DA93D2611CD3D00844350 /* RoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadView.swift; sourceTree = "<group>"; };
+		792DA9442611D29000844350 /* UrlImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImageLoader.swift; sourceTree = "<group>"; };
+		792DA94B2611D82F00844350 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		792DA9522611D89500844350 /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
 		792F97032611AB7400F82FC2 /* TrafficMetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficMetaData.swift; sourceTree = "<group>"; };
-		7945419026087187003D8E4A /* Traffic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traffic.swift; sourceTree = "<group>"; };
 		79454196260873D8003D8E4A /* CurrentTraffic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTraffic.swift; sourceTree = "<group>"; };
 		794541A52608748A003D8E4A /* CurrentTrafficViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTrafficViewModel.swift; sourceTree = "<group>"; };
 		796A85E725F61E7F009F6F23 /* DigitrafficAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitrafficAppApp.swift; sourceTree = "<group>"; };
@@ -173,6 +189,11 @@
 			children = (
 				79454196260873D8003D8E4A /* CurrentTraffic.swift */,
 				796A85E825F61E7F009F6F23 /* ContentView.swift */,
+				792DA92F2611CBC200844350 /* MunicipalityView.swift */,
+				792DA9362611CC4A00844350 /* CityView.swift */,
+				792DA93D2611CD3D00844350 /* RoadView.swift */,
+				792DA94B2611D82F00844350 /* ImageView.swift */,
+				792DA9522611D89500844350 /* AsyncImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,6 +204,7 @@
 				796A862A25F61F47009F6F23 /* TrafficData.swift */,
 				794541A52608748A003D8E4A /* CurrentTrafficViewModel.swift */,
 				792F97032611AB7400F82FC2 /* TrafficMetaData.swift */,
+				792DA9442611D29000844350 /* UrlImageLoader.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -192,7 +214,6 @@
 			children = (
 				796A863125F6339F009F6F23 /* TrafficNetworkManager.swift */,
 				796A863B25F633D3009F6F23 /* NetworkManagerProtocol.swift */,
-				7945419026087187003D8E4A /* Traffic.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -355,13 +376,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				796A861225F61E81009F6F23 /* ContentView.swift in Sources */,
-				7945419126087187003D8E4A /* Traffic.swift in Sources */,
 				796A862B25F61F47009F6F23 /* TrafficData.swift in Sources */,
 				79454197260873D8003D8E4A /* CurrentTraffic.swift in Sources */,
 				796A863225F6339F009F6F23 /* TrafficNetworkManager.swift in Sources */,
+				792DA9372611CC4A00844350 /* CityView.swift in Sources */,
 				796A863C25F633D3009F6F23 /* NetworkManagerProtocol.swift in Sources */,
+				792DA9452611D29000844350 /* UrlImageLoader.swift in Sources */,
+				792DA9302611CBC200844350 /* MunicipalityView.swift in Sources */,
 				792F97042611AB7400F82FC2 /* TrafficMetaData.swift in Sources */,
+				792DA9532611D89500844350 /* AsyncImage.swift in Sources */,
 				794541A62608748A003D8E4A /* CurrentTrafficViewModel.swift in Sources */,
+				792DA93E2611CD3D00844350 /* RoadView.swift in Sources */,
+				792DA94C2611D82F00844350 /* ImageView.swift in Sources */,
 				796A861025F61E81009F6F23 /* DigitrafficAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,8 +396,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				792DA94D2611D82F00844350 /* ImageView.swift in Sources */,
+				792DA9542611D89500844350 /* AsyncImage.swift in Sources */,
+				792DA9312611CBC200844350 /* MunicipalityView.swift in Sources */,
+				792DA9382611CC4A00844350 /* CityView.swift in Sources */,
 				7945419C260873F0003D8E4A /* CurrentTraffic.swift in Sources */,
+				792DA9462611D29000844350 /* UrlImageLoader.swift in Sources */,
 				796A861325F61E81009F6F23 /* ContentView.swift in Sources */,
+				792DA93F2611CD3D00844350 /* RoadView.swift in Sources */,
 				796A861125F61E81009F6F23 /* DigitrafficAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

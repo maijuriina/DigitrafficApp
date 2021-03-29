@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TrafficData: Codable {
+struct Results: Codable {
     let dataUpdatedTime: String
     let cameraStations: [CameraStation]
 }

@@ -22,6 +22,7 @@ extension CurrentTrafficViewModel {
     func fetch() {
         networkManager.fetchData()
     }
+    
     /*func fetch(by id: String = "C0150200") {
         networkManager.fetchCurrentTraffic(id: id) {
             self.current = $0

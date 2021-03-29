@@ -14,13 +14,13 @@ struct ContentView: View {
     // @ObservedObject var traffic = CurrentTrafficViewModel()
     
     var body: some View {
-        VStack (alignment: .leading) {
+        //VStack (alignment: .leading) {
             Text("Digitraffic")
                 .bold()
                 
-            //CurrentTraffic(traffic: self.traffic.current)
-        }
-        .padding(.leading)
+            CurrentTraffic()
+        //}
+        //.padding(.leading)
     }
 }
 
