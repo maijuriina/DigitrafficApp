@@ -29,6 +29,7 @@ struct RoadView: View {
 
 struct RoadView_Previews: PreviewProvider {
     static var previews: some View {
-        RoadView(road: "Road", roadId: "000")
+        RoadView(road: "Road", roadId: "111")
+            .environmentObject(TrafficNetworkManager())
     }
 }

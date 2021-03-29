@@ -27,5 +27,6 @@ struct MunicipalityView: View {
 struct MunicipalityView_Previews: PreviewProvider {
     static var previews: some View {
         MunicipalityView(province: "Province")
+            .environmentObject(TrafficNetworkManager())
     }
 }

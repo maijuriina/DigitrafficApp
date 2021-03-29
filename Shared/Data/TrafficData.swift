@@ -15,13 +15,11 @@ struct Results: Codable {
 struct CameraStation: Codable, Identifiable {
     let id: String
     let roadStationID: Int
-    let nearestWeatherStationID: Int?
     let cameraPresets: [CameraPreset]
     
     enum CodingKeys: String, CodingKey {
         case id
         case roadStationID = "roadStationId"
-        case nearestWeatherStationID = "nearestWeatherStationId"
         case cameraPresets
     }
 }

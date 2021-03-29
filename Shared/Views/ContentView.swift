@@ -11,21 +11,34 @@ import UIKit
 struct ContentView: View {
     // create instance of TrafficNetworkManager
     @EnvironmentObject var networkManager: TrafficNetworkManager
-    // @ObservedObject var traffic = CurrentTrafficViewModel()
     
     var body: some View {
-        //VStack (alignment: .leading) {
-            Text("Digitraffic")
+            /*Text("Digitraffic")
                 .bold()
-                
-            CurrentTraffic()
-        //}
-        //.padding(.leading)
+                .font(.title3)*/
+        
+            NavigationView {
+                List {
+                    ForEach(networkManager.provinceArray, id: \.self) { province in
+                        NavigationLink(destination: MunicipalityView(province: province)) {
+                            Text(province)
+                                .font(.title2)
+                                .foregroundColor(Color.purple)
+                        }
+                    }
+                }
+                .navigationBarTitle("Traffic camera")
+                .onAppear {
+                    self.networkManager.fetchData()
+                    self.networkManager.fetchMetadata()
+                }
+            }
+        }
     }
-}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(TrafficNetworkManager())
     }
 }
