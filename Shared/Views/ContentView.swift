@@ -19,17 +19,17 @@ struct ContentView: View {
                     ForEach(networkManager.provinceArray, id: \.self) { province in
                         NavigationLink(destination: MunicipalityView(province: province)) {
                             Text(province)
-                                //.font(.title2)
-                                //.foregroundColor(Color.purple)
+                                .font(.title2)
                         }
                     }
                 }
-                .navigationBarTitle("Traffic camera")
+                .navigationBarTitle("Traffic cameras")
                 .onAppear {
                     self.networkManager.fetchData()
                     self.networkManager.fetchMetadata()
                 }
             }
+            .padding(.all)
         }
     }
 
