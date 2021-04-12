@@ -13,13 +13,13 @@ struct ContentView: View {
     @EnvironmentObject var networkManager: TrafficNetworkManager
     
     var body: some View {
-        
             NavigationView {
                 List {
                     ForEach(networkManager.provinceArray, id: \.self) { province in
                         NavigationLink(destination: MunicipalityView(province: province)) {
                             Text(province)
                                 .font(.title2)
+                                .foregroundColor(Color.purple)
                         }
                     }
                 }

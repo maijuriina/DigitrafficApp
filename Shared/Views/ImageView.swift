@@ -14,7 +14,6 @@ struct ImageView: View {
     var body: some View {
         AsyncImage(url: imageUrl, placeholder: Text("Loading image.."))
             .aspectRatio(contentMode: .fit)
-            //.padding(2)
             .cornerRadius(10)
         Spacer()
     }

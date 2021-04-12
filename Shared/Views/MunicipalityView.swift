@@ -15,6 +15,7 @@ struct MunicipalityView: View {
         List (networkManager.municipalityArray, id: \.self) { municipality in
             NavigationLink(destination: CityView(municipality: municipality)) {
                 Text(municipality)
+                    .foregroundColor(Color.purple)
             }
         }
         .navigationBarTitle(province)

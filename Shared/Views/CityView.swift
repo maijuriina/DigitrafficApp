@@ -16,6 +16,7 @@ struct CityView: View {
         List(networkManager.roadNames, id: \.self) { road in
             NavigationLink(destination: RoadView(road: road, roadId: "null")) {
                 Text(road)
+                    .foregroundColor(Color.purple)
             }
         }
         .navigationBarTitle(municipality)

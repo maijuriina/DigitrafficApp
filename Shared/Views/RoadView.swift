@@ -17,6 +17,7 @@ struct RoadView: View {
         List(networkManager.tempRoads) { road in
             NavigationLink(destination: ImageView(imageUrl: URL(string: road.imageUrl)!)) {
                 Text(road.presentationName ?? "Road name not in use")
+                    .foregroundColor(Color.purple)
             }
         }
         .onAppear() {
