@@ -13,22 +13,22 @@ class TrafficNetworkManager: ObservableObject {
     @Published var cameraStations = [CameraStation]()
     
     // "https://tie.digitraffic.fi/api/v3/metadata/camera-stations"
-    @Published var metadata = [DataSet]()
+    @Published var metadata = [Feature]()
     
-    // Store provinces in @Published array to be displayed in Views
+    // Store provinces in @Published array to be shown inside Views
     var province: Set<String> = []
     @Published var provinceArray: [String] = []
     
-    // Store municipalitys in @Published array to be displayed in Views
+    // Store municipalities also
     var municipality: Set<String> = []
     @Published var municipalityArray: [String] = []
     
     @Published var tempRoads: [Preset] = []
     
-    // Store road names in @Published array to be displayed in Views
+    // Store road names in @Published array to be shown inside Views
     @Published var roadNames: [String] = []
     
-    // Store imageUrls in @Published array to be displayed in Views
+    // Store imageUrls also
     @Published var imageUrls: [String] = []
     
     @Published var cameraPresets: [CameraPreset] = []
@@ -42,7 +42,6 @@ class TrafficNetworkManager: ObservableObject {
                     if let safeData = data {
                         do {
                             let results = try decoder.decode(Results.self, from: safeData)
-                            print(results)
                             DispatchQueue.main.async {
                                 self.cameraStations = results.cameraStations
                             }
@@ -65,11 +64,11 @@ class TrafficNetworkManager: ObservableObject {
                     let decoder = JSONDecoder()
                     if let safeData = data {
                         do {
-                            let results = try decoder.decode(TrafficMetadata.self, from: safeData)
+                            let results = try decoder.decode(Metadata.self, from: safeData)
                             DispatchQueue.main.async {
-                                self.metadata = results.dataSet
+                                self.metadata = results.features
                                 
-                                for i in results.dataSet {
+                                for i in results.features {
                                     self.province.insert(i.properties.province)
                                 }
                                 self.provinceArray = Array(self.province)
@@ -143,56 +142,3 @@ class TrafficNetworkManager: ObservableObject {
         }
     }
 }
-
-
-/*class TrafficNetworkManager : NetworkManagerProtocol {
-    public let API_URL = "https://tie.digitraffic.fi/api/v1/data/camera-data"
-    
-    func fetchAllTraffic() {
-        guard let url = URL(string: API_URL) else { // creates the url
-            fatalError()
-        }
-        print(url)
-        let urlRequest = URLRequest(url: url)
-        URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
-            guard let data = data else { return }
-            
-            do {
-                let currentAllTraffic = try JSONDecoder().decode(TrafficModel.self, from: data)
-                print(currentAllTraffic)
-            } catch {
-                print(error)
-            }
-        }.resume()
-    }
-    
-    func fetchCurrentTraffic(id: String, completion: @escaping (TrafficModel) -> ()) {
-        let API_URL_WITH_ID = API_URL + "/" + id
-        guard let url = URL(string: API_URL_WITH_ID) else { // creates the url
-            fatalError()
-        }
-        print(url)
-        // problem much like https://stackoverflow.com/questions/50179922/debugdescription-expected-to-decode-arrayany-but-found-a-dictionary-instead
-        
-        // start urlsession with request
-        let urlRequest = URLRequest(url: url)
-        URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
-            //print(String(data: data!, encoding: .utf8))
-            guard let data = data else { return }
-
-            // if not nil, decode with TrafficModel
-            do {
-                let decoder = JSONDecoder()
-                let currentTraffic = try decoder.decode(TrafficModel.self, from: data)
-                /*for cam in currentTraffic.cameraStations {
-                    print(cam)
-                }*/
-                print(currentTraffic as Any)
-                print(currentTraffic.self.cameraStations as Any)
-                completion(currentTraffic.self)
-            } catch {
-                print(error)
-            }
-        }.resume()
-    }
-}*/

@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct TrafficMetadata: Decodable {
-    let dataSet: [DataSet]
+struct Metadata: Decodable {
+    let features: [Feature]
 }
 
-struct DataSet: Decodable, Identifiable {
+struct Feature: Decodable, Identifiable {
     let id: String
     let properties: Property
     
@@ -42,7 +42,7 @@ struct Names: Decodable {
 }
 
 struct Preset: Decodable, Identifiable {
-    var id = UUID()
+    let id = UUID()
     let presentationName: String?
     let imageUrl: String
 }

@@ -6,24 +6,21 @@
 //
 
 import SwiftUI
-import UIKit
+//import UIKit
 
 struct ContentView: View {
     // create instance of TrafficNetworkManager
     @EnvironmentObject var networkManager: TrafficNetworkManager
     
     var body: some View {
-            /*Text("Digitraffic")
-                .bold()
-                .font(.title3)*/
         
             NavigationView {
                 List {
                     ForEach(networkManager.provinceArray, id: \.self) { province in
                         NavigationLink(destination: MunicipalityView(province: province)) {
                             Text(province)
-                                .font(.title2)
-                                .foregroundColor(Color.purple)
+                                //.font(.title2)
+                                //.foregroundColor(Color.purple)
                         }
                     }
                 }

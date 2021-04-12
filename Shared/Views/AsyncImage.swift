@@ -9,24 +9,24 @@ import SwiftUI
 
 struct AsyncImage<Placeholder: View>: View {
     
-    @ObservedObject private var imageLoader: ImageLoader
+    @ObservedObject private var loader: ImageLoader
     private let placeholder: Placeholder?
     
     init(url: URL, placeholder: Placeholder? = nil) {
-        imageLoader = ImageLoader(url: url)
+        loader = ImageLoader(url: url)
         self.placeholder = placeholder
     }
     
     var body: some View {
-        roadImage
-            .onAppear(perform: imageLoader.load)
-            .onDisappear(perform: imageLoader.cancel)
+        image
+            .onAppear(perform: loader.load)
+            .onDisappear(perform: loader.cancel)
     }
     
-    private var roadImage: some View {
+    private var image: some View {
         Group {
-            if imageLoader.image != nil {
-                Image(uiImage: imageLoader.image!)
+            if loader.image != nil {
+                Image(uiImage: loader.image!)
                     .resizable()
             } else {
                 placeholder
