@@ -29,6 +29,12 @@
 	<true/>
 	<key>UILaunchScreen</key>
 	<dict/>
+	<key>Image Name</key>
+	<string>Launchscreen-image</string>
+	<key>Image respects safe area insets</key>
+	<false/>
+	<key>Background color</key>
+	<string>Launchscreen-background</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
